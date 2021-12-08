@@ -1,4 +1,12 @@
-export function RepositoryItem(props) {
+interface RepositoryItemPropos {
+    repository: {
+        name: string,  
+        description: string,
+        html_url: string
+    }
+}
+
+export function RepositoryItem(props : RepositoryItemPropos) {
     return (
         <li>
             <strong>{props.repository.name }</strong>
